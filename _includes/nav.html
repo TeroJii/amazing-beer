@@ -1,0 +1,33 @@
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="{{ site.baseurl }}/" class="nav__logo" aria-label="{{ site.title }} — Home">
+      🍺 {{ site.title }}
+    </a>
+    <button
+      class="nav__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav__links" id="nav-links" role="list">
+      {% for link in site.nav_links %}
+      <li>
+        <a
+          href="{{ site.baseurl }}{{ link.url }}"
+          {% if page.url == link.url %}class="active" aria-current="page"{% endif %}
+        >
+          {{ link.title }}
+        </a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="{{ site.baseurl }}/shop/" class="btn btn--primary btn--sm">Order Now</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,38 @@
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <h3>🍺 {{ site.title }}</h3>
+      <p>Crafting exceptional beers with passion, tradition, and the finest natural ingredients since 2010.</p>
+      <p class="footer__tagline"><em>"Every sip tells a story."</em></p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation — Pages">
+      <h4>Pages</h4>
+      <ul role="list">
+        {% for link in site.nav_links %}
+        <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="footer__nav" aria-label="Footer navigation — Beers">
+      <h4>Our Beers</h4>
+      <ul role="list">
+        <li><a href="{{ site.baseurl }}/products/">Golden Horizon Lager</a></li>
+        <li><a href="{{ site.baseurl }}/products/">Midnight Stout</a></li>
+        <li><a href="{{ site.baseurl }}/products/">Hop Odyssey IPA</a></li>
+      </ul>
+    </nav>
+    <div class="footer__nav">
+      <h4>Contact</h4>
+      <address>
+        <p>Amazing Beer Co.<br>
+        42 Brewmaster Lane<br>
+        Portland, OR 97201</p>
+        <p><a href="mailto:hello@amazingbeer.co">hello@amazingbeer.co</a></p>
+      </address>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p class="footer__tagline">Brewed with ❤️ in Portland, Oregon.</p>
+  </div>
+</footer>

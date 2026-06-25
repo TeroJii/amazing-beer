@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{{ content }}
+
+<section class="section">
+  <div class="container">
+    <div class="products-grid">
+      {% for product in page.products %}
+      <article class="product-card">
+        <div class="product-card__image">
+          <img
+            src="{{ site.baseurl }}/img/{{ product.image }}"
+            alt="{{ product.name }} — {{ product.style }} beer by Amazing Beer Co."
+            loading="lazy"
+          >
+        </div>
+        <div class="product-card__content">
+          <span class="product-card__badge">{{ product.style }}</span>
+          <h2>{{ product.name }}</h2>
+          <p class="product-card__tagline">{{ product.tagline }}</p>
+          <div class="product-card__meta">
+            <div class="product-card__meta-item">
+              <span class="product-card__meta-label">ABV</span>
+              <span class="product-card__meta-value">{{ product.abv }}</span>
+            </div>
+            <div class="product-card__meta-item">
+              <span class="product-card__meta-label">IBU</span>
+              <span class="product-card__meta-value">{{ product.ibu }}</span>
+            </div>
+            <div class="product-card__meta-item">
+              <span class="product-card__meta-label">Volume</span>
+              <span class="product-card__meta-value">{{ product.volume }}</span>
+            </div>
+          </div>
+          <p class="product-card__description">{{ product.description }}</p>
+          <a href="{{ site.baseurl }}/shop/" class="btn btn--primary">Find in Shop</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to taste the difference?</h2>
+    <p>Our shop is opening soon — be the first to know when you can order Amazing Beer delivered to your door.</p>
+    <a href="{{ site.baseurl }}/shop/" class="btn btn--dark">Visit the Shop</a>
+  </div>
+</section>
