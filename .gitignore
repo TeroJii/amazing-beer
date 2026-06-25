@@ -1,0 +1,17 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+.bundle/
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if ever used)
+node_modules/
+npm-debug.log

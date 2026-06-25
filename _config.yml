@@ -1,0 +1,37 @@
+title: Amazing Beer Co.
+tagline: Brewed with Passion, Crafted for You
+description: >
+  Amazing Beer Co. crafts bold, flavorful beers using traditional methods and the
+  finest natural ingredients. Discover our award-winning lager, stout, and IPA.
+baseurl: "/amazing-beer"
+url: "https://terojii.github.io"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Navigation links (used by _includes/nav.html)
+nav_links:
+  - title: Home
+    url: /
+  - title: Our Beers
+    url: /products/
+  - title: Our Story
+    url: /company/
+  - title: Shop
+    url: /shop/
+
+# Exclude from Jekyll build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .github
